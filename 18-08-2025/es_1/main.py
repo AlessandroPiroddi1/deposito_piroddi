@@ -57,6 +57,7 @@ if __name__ == "__main__":
     print(f"Numero totale di parole: {n_parole}")
 
     # 3) top-5 parole più frequenti
-    for parola, cnt in top5_parole(testo_norm):
-        print(f"{parola}:{cnt}")
+    top5 = top5_parole(testo_norm)
+    print(top5)   # stampa lista di tuple
+
     
