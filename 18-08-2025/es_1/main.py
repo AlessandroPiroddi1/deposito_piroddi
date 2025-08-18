@@ -26,6 +26,14 @@ def conta_righe(testo_normalizzato: str) -> int:
     # splitlines(True) mantiene l'informazione delle righe; qui basta splitlines() per contare
     return len(testo_normalizzato.splitlines())
 
+def conta_parole(testo_normalizzato: str) -> int:
+    """
+    Conta il numero totale di parole sul testo normalizzato.
+    La tokenizzazione avviene separando su whitespace, con newline già preservati.
+    """
+    # Sostituiamo i newline con spazi per una tokenizzazione uniforme, senza alterare il conteggio parole
+    tokens = testo_normalizzato.replace("\n", " ").split()
+    return len(tokens)
 
 if __name__ == "__main__":
     path = r"deposito_piroddi\18-08-2025\es_1\data\bot code.txt"
@@ -35,4 +43,7 @@ if __name__ == "__main__":
     n_righe = conta_righe(testo_norm)
     print(f"Numero totale di righe: {n_righe}")
 
+    # 2) numero totale di parole
+    n_parole = conta_parole(testo_norm)
+    print(f"Numero totale di parole: {n_parole}")
     
