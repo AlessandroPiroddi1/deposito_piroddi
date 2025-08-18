@@ -35,6 +35,15 @@ def conta_parole(testo_normalizzato: str) -> int:
     tokens = testo_normalizzato.replace("\n", " ").split()
     return len(tokens)
 
+def top5_parole(testo_normalizzato: str) -> List[Tuple[str, int]]:
+    """
+    Restituisce la top-5 parole più frequenti (parola, conteggio) dal testo normalizzato.
+    """
+    tokens = testo_normalizzato.replace("\n", " ").split()
+    counter = Counter(tokens)
+    return counter.most_common(5)
+
+
 if __name__ == "__main__":
     path = r"deposito_piroddi\18-08-2025\es_1\data\bot code.txt"
     testo_norm = leggi_e_normalizza(path)
@@ -46,4 +55,8 @@ if __name__ == "__main__":
     # 2) numero totale di parole
     n_parole = conta_parole(testo_norm)
     print(f"Numero totale di parole: {n_parole}")
+
+    # 3) top-5 parole più frequenti
+    for parola, cnt in top5_parole(testo_norm):
+        print(f"{parola}:{cnt}")
     
