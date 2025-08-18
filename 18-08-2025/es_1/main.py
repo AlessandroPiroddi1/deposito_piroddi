@@ -45,7 +45,7 @@ def top5_parole(testo_normalizzato: str) -> List[Tuple[str, int]]:
 
 
 if __name__ == "__main__":
-    path = r"deposito_piroddi\18-08-2025\es_1\data\bot code.txt"
+    path = r"18-08-2025\es_1\data\bot code.txt"
     testo_norm = leggi_e_normalizza(path)
 
     # 1) numero totale di righe
