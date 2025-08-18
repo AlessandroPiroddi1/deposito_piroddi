@@ -1,0 +1,18 @@
+prompt
+1) gold standard: codice
+2) metriche dentro il prompt : specificare metodo di calcolo (deterministico)
+3) Cot, fiew shot
+
+calcolare varianza e media per ogni 
+
+Giudice 1 gpt4.1mini : media metriche:4,35 -> nome modello 4.1
+guide 2 starcode : 4o
+guide 3 codex mini: 4,35 -> 4.1
+
+llm per conversion 4 modelli 4o 4.1mini 4.1 4.1 nano
+giuria: 4.1mini temp 0, 4.1mini temp 0,09, 4.1 temp 0,2
+
+media dei risultati per ciascuna metrica
+
+
+paper
